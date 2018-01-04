@@ -1,0 +1,126 @@
+// ==========================================================================
+// #Resources Card
+// ==========================================================================
+
+.resource-card {
+	width: span(12);
+	float: left;
+	margin-right: gutter();
+	margin-bottom: gutter(10);
+    text-align: center;
+	position: relative;
+
+	@include media-query(medium) {
+		width: span(6);
+		float: left;
+		&:nth-child(2n) {
+			width: span(6);
+			margin-right: 0;
+		}
+	}
+
+	@include media-query(large) {
+		width: span(4);
+		&:nth-child(2n) {
+			 width: span(4);
+			 margin-right: gutter();
+		}
+		&:nth-child(3n) {
+			 width: span(4);
+			 margin-right: 0;
+		}
+	}
+
+	&__img-wrap {
+		position: relative;
+    	overflow: hidden;
+        text-align: center;
+
+        &::before {
+        	content: "";
+        	@include absolute(top 0 right 0 bottom 0 left 0);
+		    background: rgba(105, 100, 102, 0.6);
+		    @include transition(all .4s ease-in-out);
+        }
+	}
+
+	&:hover {
+
+		& .resource-card__front {
+		    @include transform(scale(0));
+		    @include transition(all .4s ease-in-out);
+		}
+
+		& .resource-card__back {
+			@include transform(scale(1));
+		    @include transition(all .4s ease-in-out);
+		}
+
+		& .resource-card__img-wrap:before {
+			background: rgba(0,0,0,.8);
+		}
+
+	}
+
+	&__img {
+		height: 260px;
+	    width: 100%;
+	    background-size: cover;
+	}
+
+	&__front {
+	    margin-top: -30px;
+	    @include absolute(top 50% right 0 left 0);
+	    @include transform(scale(1));
+	    @include transition(all .4s ease-in-out);
+	}
+
+	&__title {
+		color: #fff;
+	    text-align: center;
+	    display: inline-block;
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #fff;
+	    margin-bottom: 10px;
+	    font-size: 1.4em;
+	    letter-spacing: 1px;
+	}
+
+	&__sub-title {
+		color: #fff;
+	    text-transform: uppercase;
+	    font-size: .9em;
+	}
+
+	&__back {
+		@include absolute(top 50% right 0 left 0);
+	    @include transform(scale(0));
+	    @include transition(all .4s ease-in-out);
+	    padding-left: 20px;
+	    padding-right: 20px;
+
+    	&--inner {
+    		@include transform(translateY(-50%));	
+    	}
+	}
+
+	&__link {
+		color: white;
+		font-size: .7rem;
+	    font-weight: 700;
+	    line-height: 2rem;
+	    letter-spacing: 1px;
+	    text-transform: uppercase;
+	    width: 30%;
+	    margin: 0 auto;
+	    border: 2px solid #f2f2f2;
+	    @include transition(all .2s ease-in-out);
+	    text-decoration: none;
+
+	    &:hover {
+	    	background: hsla(0, 0%, 75%, 0.2);
+    		border: 2px solid transparent;
+	    }
+	}
+
+}

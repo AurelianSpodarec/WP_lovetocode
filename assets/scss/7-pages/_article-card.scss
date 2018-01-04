@@ -1,0 +1,140 @@
+// ==========================================================================
+// #Article Card
+// ==========================================================================
+
+.article-card {
+	width: span(12);
+	background-color: white;
+ 	border-radius: 5px;
+ 	position: relative;
+ 	min-height: 435px;
+ 	
+ 	margin-right: gutter();
+	margin-bottom: gutter(10);
+    border: 2px solid #e6e6e6;
+
+    &:hover {
+        -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    	box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    	@include transition(all .3s cubic-bezier(.25,.8,.25,1));
+    }
+
+	@include media-query(medium) {
+		width: span(6);
+		float: left;
+		&:nth-child(2n) {
+			width: span(6);
+			margin-right: 0;
+		}
+	}
+
+	@include media-query(large) {
+		width: span(4);
+		&:nth-child(2n) {
+			 width: span(4);
+			 margin-right: gutter();
+		}
+		&:nth-child(3n) {
+			 width: span(4);
+			 margin-right: 0;
+		}
+		// &:nth-child(4n) {
+		// 	margin-right: 0;
+		// }
+	}
+
+	// Header
+	&__header {
+		position: relative;
+	}
+
+	&__category {
+		@include absolute(top -12px left 15px);
+		display: block;
+		background: white;
+		border-radius: 4px;
+		font-weight: bold;
+		font-size: 12px;
+	}
+
+	&__category-link {
+		//color: grey;
+		color: #9e9e9e;
+		display: block;
+    	padding: 3px 10px;
+	}
+
+	&__img-wrap {
+		height: 200px;
+	    overflow: hidden;
+	}
+
+	&__img {
+	    height: 100%;
+	    border-radius: 5px 5px 0 0;
+	    background-size: cover;
+    	width: 100%;
+	}
+
+	&__views {
+		@include absolute(bottom 20px right 20px);
+		background: rgba(0,0,0, 0.5);
+		padding: 3px 9px;
+		border-radius: 4px;
+		color: white;
+		font-size: 14px;
+		& i {
+			margin-right: 5px;
+		}
+	}
+
+	// Content
+	&__content {
+		padding: 20px;
+		max-height: 90px;
+    	overflow: hidden;
+	}
+
+	&__title-anchor {
+	    font-size: 1.2rem;
+    	color: #101010;
+    	display: block;
+	}
+
+	// Footer
+	&__footer {
+		@include flexbox();
+		@include align-items(center);
+		padding: 20px;
+	    width: 100%;
+	    @include absolute(bottom 0);
+	}
+
+	&__author-img-wrap {
+
+	}
+
+	&__author-img {
+		@include box(37px);
+	    border-radius: 50%;
+	    margin-right: 9px;
+	}
+
+	&__author-info {
+
+	}
+
+	&__author-name {
+    	display: block;
+   		font-weight: 600;
+	    font-size: 14px;
+	    line-height: 1.4;
+	    color: #222;
+	}
+
+	&__post-date {
+		display: block;
+	    font-size: 12px;
+	}
+
+}

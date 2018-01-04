@@ -1,0 +1,45 @@
+// ==========================================================================
+// #Layout Global
+// ==========================================================================
+
+
+// Containers
+.container {
+	@extend %container;
+	@extend %container-default;
+}
+
+.content-wrap {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.container-fluid {
+	@extend %container;
+	max-width: 80%;
+}
+
+.container-almost-normal {
+	@extend %container;
+	@extend %container-almost-normal;
+}
+
+.container-very-narrow {
+	@extend %container;
+	@extend %container-very-narrow;
+}
+
+.container-narrow {
+	@extend %container;
+	@extend %container-narrow;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.card-page {
+	background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    padding: 2em;
+}

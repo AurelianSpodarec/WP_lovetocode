@@ -1,0 +1,212 @@
+// ==========================================================================
+// #Site Header
+// ==========================================================================
+
+.site-header {
+    @include relative();
+    z-index: 9999;
+	background-color: #fff;
+    @include clearfix;
+
+    &__outer {
+        position: relative;
+        z-index: 9999;
+        -webkit-box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    }
+
+    &__inner {
+        @include container;
+		display: block;
+		@media screen and (min-width: 905px) {
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-between);
+            height: 58px;
+		}    		
+    }
+
+    &__nav-head {
+    	@include clearfix;
+    	@include relative();
+        @include flex(0 0 auto);
+        z-index: 9999;
+        margin: 0 -15px;
+        padding: 0 15px;
+        background-color: white;
+        -webkit-box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+
+        @media screen and (min-width: 905px) {
+            margin: inherit;
+            padding-left: 0;
+            box-shadow: unset;
+        }
+    }
+
+    &__logo {
+    	float: left;
+    	@include justify-content(center);
+    	@include flexbox();
+    	@include align-items(center);
+        @include flex(0 0 auto);
+    }
+
+    &__logo-img {
+        max-width: 35px;
+        @include media-query(medium) {
+            max-width: 44px;
+        }
+    }
+
+    &__logo-text {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: 7px;
+        text-transform: uppercase;
+        color: #333;
+        @include media-query(medium) {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+    }
+
+    &__hamburger {
+        @include absolute(right 0 bottom 50%);
+        width: 45px;
+        height: 28px;
+        @include transform(translateY(50%));
+        border: 0;
+        background: none;
+        @media screen and (min-width: 905px) {
+            display: none;
+        }
+
+        &.is-active .site-header__hamburger--bar {
+            transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
+            &:first-child {
+               top: 6px;
+                @include transform(rotate(45deg));
+                transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                bottom: 6px;
+                @include transform(rotate(-45deg));
+                transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+            }
+        }
+    }
+
+    &__hamburger-bars {
+        position: relative;
+        width: 100%;
+        height: 14px;
+    }
+
+    &__hamburger--bar {
+        display: block;
+
+        width: 100%;
+        height: 3px;
+        margin-top: -1px;
+
+        transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
+        -webkit-animation: open-in .3s cubic-bezier(.18,.89,.67,1.16) .3s 1 normal forwards;
+                animation: open-in .3s cubic-bezier(.18,.89,.67,1.16) .3s 1 normal forwards;
+
+        background-color: #606060;
+        @include absolute(right);
+        @include border-radius(2px);
+        @include transition(all .2s);
+        &:first-child {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 6px;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+
+    &__main-nav {
+		display: block;
+        width: span(all);
+        margin: 0 -15px;
+        background: #fff;
+        @include transition(ease-in-out .25s);
+        @include transform(translateY(-100%));
+        @include absolute();
+
+	  	@media screen and (min-width: 905px) {
+	  		position: unset;
+            margin: inherit;
+            @include flexbox();
+            @include transform(translateY(0));
+            @include justify-content(flex-end);
+	  	}
+
+	    &.is-active {
+	    	@include transform(translateY(0));
+	    }
+    }
+
+    &__search {
+    	display: none;
+    	@include media-query(medium) {
+			
+		}
+
+        @include media-query(large) {
+            @include relative();
+            width: span(all);
+            @include flexbox();
+            @include align-items(center);
+        }
+    }
+
+    &__search-input {
+   		font-size: 13px;
+        width: span(all);
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 10px 15px;
+        border: 1px solid transparent;
+        outline: none;
+        background-color: #f2f3f5;
+        @include transition(all .2s ease);
+        @include border-radius(3px);
+
+        &::placeholder {
+            color: #b1b1b1;
+            font-weight: bold;
+        }
+
+        &:focus {
+            background-color: white;
+            border: 1px solid #f2f3f5;
+            padding: 16px 15px;
+        }
+    }
+
+    &__search-button {
+        width: 16px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        @include flexbox();
+        @include align-items(center);
+        @include absolute(right 16px);
+    }
+
+    &__search-icon {
+        font-size: 1.1rem;
+        color: #a7a7a7;
+    }
+
+}

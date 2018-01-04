@@ -1,0 +1,73 @@
+// ==========================================================================
+// #Widget Subscribe Box
+// ==========================================================================
+
+.widget {
+    margin-bottom: 35px;
+}
+
+.widget-subscribe-box {
+    padding: 15px 24px 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: #55b2f4;
+
+    &__icon {
+        font-size: 2.7em;
+        margin: 9px 0;
+        padding: 36px;
+        color: #55b2f4;
+        @include border-radius(50%);
+        background-color: #6abdf8;
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: white;
+    }
+
+    &__desc {
+        margin: 13px 0 18px;
+        color: white;
+    }
+
+    &__input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 13px 16px;
+        border: none;
+        background-color: #6abdf8;
+
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    &__sub-btn {
+        line-height: 40px;
+        display: block;
+        width: 100%;
+        height: 40px;
+        text-transform: uppercase;
+        color: #55b1f4;
+        background-color: white;
+
+        &:hover {
+            background-color: #fdfdfd;
+            border: 1px solid #55b2f4;
+        }
+    }
+
+    &__privacy {
+        font-size: .7rem;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #9ddcfb;
+    }
+
+    &__privacy-highlight {
+        color: #1295f4;
+    }
+
+}

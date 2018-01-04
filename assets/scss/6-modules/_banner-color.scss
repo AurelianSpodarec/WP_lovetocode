@@ -1,0 +1,113 @@
+// ==========================================================================
+// #Banner
+// ==========================================================================
+
+.banner {
+    color: white;
+
+    &__outer {
+        @include container;
+    }
+
+    &__inner {
+        min-height: 215px;
+        padding: 35px 0;
+    }
+
+    &__title {
+        font-size: 3rem;
+        padding: 12px 0 35px;
+        color: white;
+    }
+
+    &__meta {
+        font-size: 1rem;
+        color: #e5e5e5;
+    }
+
+    &__meta-tag {
+        &::after{
+            content: '';
+            display: inline-block;
+            @include box(4px);
+            margin: 0 9px;
+            @include transform(translateX(50%));
+            vertical-align: middle;
+            @include border-radius(7.5px);
+            background-color: #e5e5e5;
+            
+        }
+
+        &:last-child:after {
+            @include box(0);
+        }
+    }
+
+    &__meta-category {
+        font-weight: bold;
+    }
+
+    // Author
+    &__author-info {
+        @include flexbox();
+        @include align-items(center);
+
+        & span {
+            margin-right: 20px;
+        }
+    }
+
+    &__author-img-wrap {
+        margin-right: 15px;
+    }
+
+    &__author-img {
+        @include box(53px);
+        @include border-radius(50%);
+        border: 2px solid white;
+    }
+
+    &__author-name {
+        & a {
+            color: white;
+        }
+    }
+
+    &__author-category {
+
+        & i {
+            margin-right: 7px;
+        }
+
+        & a {
+            color: white;
+        }
+    }
+
+    
+    // &--html-css {
+
+    // }
+
+    // &--wordpress {
+
+    // }
+
+    // &--javascript {
+        
+    // }
+
+    &--orange {
+        background-color: #F6B33C;
+    }
+
+    &--blue {
+        background-color: #55b2f4;
+    }
+
+    &--salmon {
+        background-color: #f47555;
+    }
+
+
+}

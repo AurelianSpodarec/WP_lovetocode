@@ -1,0 +1,33 @@
+// ==========================================================================
+// #Buttons
+// ==========================================================================
+
+.btn {
+	display: inline-block;
+	width: auto!important;
+	font-size: 14px!important;
+    height: 40px!important;
+    line-height: 36px!important;
+    padding: 0 15px!important;
+    font-family: Helvetica!important;
+    color: white!important;
+    font-weight: bold!important;
+}
+
+.btn--primary {
+    background-color: #F9845B;
+    border-color: #F9845B;
+
+    &:hover {
+    	background-color: #f75f2a;
+    	border-color: #f75f2a;
+    }
+}
+
+.btn--right {
+    float: right;
+}
+
+.btn--contact {
+	float: right; 
+}

@@ -1,0 +1,43 @@
+// ==========================================================================
+// #Layout Extend
+// ==========================================================================
+
+%container {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+%container-almost-normal {
+	@include media-query(large) {
+		max-width: 1090px;
+	}
+}
+
+%container-default {
+	@include media-query(large) {
+        max-width: 1190px;
+        //max-width: 1450px;
+    }
+}
+
+%container-narrow {
+	@include media-query(large) {
+		max-width: 950px;
+	}
+}
+
+%container-very-narrow {
+	@include media-query(large) {
+		max-width: 820px;
+	}
+}
+
+%container-wide {
+	@include media-query(large) {
+		max-width: 1400px;
+	}
+}
+
+
+ 

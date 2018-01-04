@@ -1,0 +1,72 @@
+// ==========================================================================
+// #More Posts
+// ==========================================================================
+
+.more-posts {
+	@include clearfix;
+	margin-bottom: 50px;
+
+	&__list {
+		@include clearfix;
+	}
+
+	&__item {
+		min-height: 200px;
+		width: span(12);
+
+		@include media-query(small) {
+			width: span(6);
+			float: left;
+			margin-right: gutter();
+
+			&:nth-child(2n) {
+				margin-right: unset;
+			}
+		}
+
+		@include media-query(medium) {
+			width: span(3 of 12);
+
+			&:nth-child(2n) {
+				margin-right: gutter();
+			}
+
+			&:nth-child(4n) {
+				margin-right: unset;
+			}
+		}
+
+		
+	}
+
+	&__img-wrap {
+		height: 150px;
+    	width: 100%;
+    	overflow: hidden;
+        margin-bottom: 20px;
+	}
+
+	&__img {
+		background-size: cover;
+		background-position: center;
+		height: 100%;
+	}
+
+	&__title {
+		color: #000;
+		font-weight: bold;
+		font-size: 17px;
+	}
+
+	&__header {
+		background: orange;
+	    width: auto;
+	    display: inline-block;
+	    padding: 6px 12px;
+	    color: white;
+	    text-transform: uppercase;
+	    margin-bottom: 10px;
+	}
+
+
+}

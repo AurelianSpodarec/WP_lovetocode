@@ -1,0 +1,31 @@
+// ==========================================================================
+// #Article Card
+// ==========================================================================
+
+.about {
+
+	& p {
+		font-size: 16px;
+	}
+
+	&__author {
+		@include clearfix;
+	}
+
+	&__img-wrap {
+		@include box(250px);
+		margin-bottom: 20px;
+		@include media-query(medium) {
+			float: left;
+			@include box(250px);
+			margin: 0 25px 25px 0;
+		}
+	}
+
+	&__img {
+		background-size: cover;
+		@include box(100%);
+		background-position: center;
+	}
+
+}

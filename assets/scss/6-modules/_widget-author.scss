@@ -1,0 +1,39 @@
+// ==========================================================================
+// #Author Sidebar
+// ==========================================================================
+
+.widget-author {
+    background-color: #282828;
+    padding: 15px;
+    @include border-radius(5px);
+    @include transition(.3s ease background);
+    text-align: center;
+
+    &__author-avatar {
+        display: block;
+
+        width: 100%;
+        height: 205px;
+
+        @include border-radius(5px);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &__author-anchor {
+        font-size: .75rem;
+
+        display: block;
+
+        height: auto;
+        padding: 9px;
+        @include transition(.25s);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        color: #fff;
+        @include border-radius(6px);
+        background: rgba(255,84,0,.88);
+    }
+}

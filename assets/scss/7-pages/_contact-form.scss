@@ -1,0 +1,62 @@
+// ==========================================================================
+// #Contact Form
+// ==========================================================================
+
+.contact-main {
+	width: span(7 of 10);
+	float: left;
+	margin-right: gutter();
+	font-size: 17px;
+
+	& h3 {
+		font-size: 31px;
+		margin: 10px 0 15px;
+	}
+
+	& p {
+		margin: 10px 0 15px;
+	}
+}
+
+.contact-form {
+	margin: 30px 0;
+	padding: 30px;
+    border: 1px solid #eaeaea;
+
+	& input,
+	& textarea,
+	& select {
+		margin-bottom: 12px;
+		width: 100%;
+		line-height: normal;
+	    font-size: 13px;
+	    width: 100%;
+	    padding: 13px 15px;
+	    border: 1px solid transparent;
+	    outline: none;
+	    border: 1px solid #dadada;
+ 
+	    @include transition(all 0.2s ease);
+	    @include border-radius(3px);
+	}
+
+}
+
+.contact-row {
+	@include clearfix;
+}
+
+.textarea-170 {
+	height: 170px;
+}
+
+.input-50 {
+	width: span(6);
+	margin-right: gutter();
+	float: left;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+ 

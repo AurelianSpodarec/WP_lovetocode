@@ -1,0 +1,79 @@
+// ==========================================================================
+// #Site Nav
+// ==========================================================================
+
+.site-nav {
+  	
+  	&__menu {
+  		@include flex(0 0 auto);
+  		@include flexbox();
+  		@include align-items(center);
+  	}
+
+	&__list {
+	    width: 100%;
+		@media screen and (min-width: 905px) {
+	    	@include flexbox();
+		}
+	}
+
+	&__item {
+		
+
+		@media screen and (min-width: 905px) {
+			display: inline-block;
+			margin: 0 5px;
+		}
+
+		&.highlight {
+	    	background-color: orange!important;
+	        border-radius: 4px;
+	        border: 1px solid transparent;
+	        color: black;
+	        &:hover {
+	        	background-color:#ffb52e;
+	        	border: 1px solid orange;
+	        }
+	    }
+	}
+
+	&__link {
+		color: #505763;
+	    display: block;
+	    font-weight: 400;
+	    line-height: 20px;
+	    padding: 8px 11px;
+	    white-space: nowrap;
+	    font-weight: bold;
+	    font-family: $font-family-monst;
+	    font-size: 11px;
+	    text-transform: uppercase;
+	    border: 1px solid transparent;
+	    border-radius: 4px;
+	    &--active {
+	    	color: black;
+		    display: block;
+		    font-weight: 400;
+		    line-height: 20px;
+		    padding: 8px 11px;
+		    white-space: nowrap;
+		    font-weight: bold;
+		    font-family: Montserrat,sans-serif;
+		    font-size: 11px;
+		    text-transform: uppercase;
+		    border: 1px solid transparent;
+		    border-radius: 4px;
+
+		    background: rgba(20,23,28,.05);
+		    border-color: rgba(20,23,28,.05);
+	        border: 1px solid transparent;
+	    }
+	    
+	    &:hover {
+	    	background: rgba(20,23,28,.05);
+	    	border-color: rgba(20,23,28,.05);
+	        border: 1px solid transparent;
+	    }
+	}
+
+}

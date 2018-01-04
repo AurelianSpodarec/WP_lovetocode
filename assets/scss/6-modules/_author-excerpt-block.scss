@@ -1,0 +1,65 @@
+// ==========================================================================
+// #Blog Authro Excerpt
+// ==========================================================================
+
+.author-excerpt {
+    font-family: roboto;
+    margin: 50px 0;
+    border: 1px solid #e5e5e5;
+    @include border-radius(2px);
+    @include clearfix;
+
+    &__inner {
+        background: #fff;
+    }
+
+    &__bar {
+        padding: 4px 16px;
+        background: #f47621;
+
+        & h3 {
+            color: white;
+        }
+    }
+
+    &__author-col {
+        display: flex;
+        padding: 32px 16px 0;
+    }
+
+    &__img-wrap {
+        float: left;
+        margin-right: 16px;
+    }   
+
+    &__img {
+        @include box(64px);
+        @include border-radius(50%);
+    } 
+
+    &__author-info {
+
+        & span {
+            color: #a2a2a2;
+        }
+
+        & h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #3a3a3a;
+        }
+    }
+
+    &__name {
+        
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 1.7em;
+        margin-top: 16px;
+        padding: 14px 16px 16px;
+    }
+
+
+}

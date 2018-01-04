@@ -1,0 +1,73 @@
+// ==========================================================================
+// #Hero
+// ==========================================================================
+
+.hero {
+    @include align-items(stretch);
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-direction(column);
+    @include justify-content(space-between);
+
+    position: relative;
+    width: 100%;
+    color: #fff;
+    background-size: 930px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .27);
+
+    padding: 35px;
+
+    // BACKGROUND IMAGES
+	&--lovetocode {
+		position: relative;
+   		overflow: hidden;
+
+		&:before {
+			content: "";
+			background-position: 50%;
+		    background-size: 750px;
+		    background-image: url(https://scotch.io/img/icon-background.png);
+		    @include absolute(top 0 left 0);
+		    height: 400%;
+		    width: 100%;
+		    display: block;
+		    z-index: 0;
+		    opacity: .07;
+		    pointer-events: none;
+		}
+	}
+
+
+
+	// GRADIENTS
+	&__gradient {
+		&--sunset {
+			background: linear-gradient(135deg,#ffa000 20%,#ff5000 80%);
+		}
+	}
+
+	// POSITIONING
+	&__text-centered {
+	    text-align: center;
+	}
+
+	// BODY
+	&__body {
+		z-index: 1;
+	}
+	
+	&__title {
+		font-family: Lato;
+	    font-size: 3.125rem;
+	    font-weight: 400;
+
+	    color: #fff;
+	}
+
+	&__sub-title {
+		font-size: 1.25rem;
+	    margin-top: -.7rem;
+	    color: hsla(0,0%,100%,.9);
+	}
+
+}
