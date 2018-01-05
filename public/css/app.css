@@ -1267,6 +1267,86 @@ blockquote cite {
     margin-top: -.7rem;
     color: rgba(255, 255, 255, 0.9); }
 
+.main-banner {
+  background-position: center;
+  background-size: cover;
+  background-color: #212121;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: 270px;
+  position: relative;
+  padding: 50px;
+  margin-bottom: 50px; }
+  .main-banner__outer {
+    display: table;
+    width: 100%;
+    height: 100%; }
+  .main-banner__inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .main-banner__desc {
+    display: table-cell;
+    vertical-align: middle; }
+    .main-banner__desc h1,
+    .main-banner__desc p {
+      color: white; }
+    .main-banner__desc p {
+      margin-bottom: 22px; }
+  .main-banner__btn {
+    background: orange;
+    padding: 9px 17px;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 4px; }
+  .main-banner__promotion {
+    float: right;
+    display: table;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 300px;
+    overflow: hidden;
+    position: relative; }
+  .main-banner__promotion-img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #383838;
+    border-radius: 3px; }
+  .main-banner__link-wrap {
+    display: inline-table;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center; }
+  .main-banner__link {
+    color: white;
+    background: rgba(255, 255, 255, 0.309804);
+    padding: 3px 9px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    display: inline-block; }
+  .main-banner__link-sub {
+    display: inline-block;
+    padding: 3px 9px;
+    background: orange;
+    color: white; }
+
 .more-posts {
   margin-bottom: 50px; }
   .more-posts::after {

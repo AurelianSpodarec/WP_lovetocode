@@ -14,7 +14,7 @@
 	        <span class="resource-product__info-item"><strong>Price: </strong><?php echo get_field('price'); ?></span>
 	        <span class="resource-product__info-item"><strong>OS: </strong><?php echo get_field('operating_system'); ?></span>
 
-       		<span class="resource-product__info-read"><span><a href="<?php the_permalink(); ?>">Read More</a></span></span>
+       		<span><span><a class="resource-product__info-read" href="<?php the_permalink(); ?>">Read More</a></span></span>
         </div>
 
         <a class="resource-product__info-downolad" href="<?php echo get_field('link'); ?>" target="_blank">GET <?php the_title(); ?> HERE</a>
