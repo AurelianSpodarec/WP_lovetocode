@@ -9,24 +9,16 @@
 .article__extra {
 	background: white;
     margin-top: 50px;
-    padding: 35px 50px;
+    @include media-query(medium) {
+        padding: 35px 50px;
+    }
 }
 
 .article-single {
 	float: left;
+    background: white;
     width: span(12);
-
-    @include media-query(medium) {
-        width: span(8 of 11);
-        margin-right: gutter();
-        padding: 40px 55px;
-    }
-
-
-       background: white;
-    //padding: 0 65px 65px 65px;
-    padding: 0 65px 0 0;
-    border-right: 1px solid #ddd;
+    padding: 30px 10px;
 
     & h2,
     & h3, 
@@ -53,10 +45,31 @@
     & p {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.5;
         word-spacing: 0.3px;
         margin-bottom: 1.25em;
+    }
+
+    @include media-query(medium) {
+        width: span(8 of 11);
+        margin-right: gutter();
+        padding: 25px 30px;
+        border-right: 1px solid #ddd;
+
+        & p {
+            font-size: 18px;
+        }
+    }
+
+
+    @include media-query(large) {   
+        //padding: 0 65px 65px 65px;
+        padding: 40px 55px;
+
+        & p {
+            font-size: 20px;
+        }
     }
 
 }

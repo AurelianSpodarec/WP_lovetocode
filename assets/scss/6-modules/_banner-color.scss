@@ -11,13 +11,25 @@
 
     &__inner {
         min-height: 215px;
-        padding: 35px 0;
+        padding: 10px 0;
+
+        @include media-query(medium) {
+            padding: 35px 0;
+        }
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 12px 0 35px;
         color: white;
+
+        @include media-query(medium) {
+            font-size: 2.5rem;
+        }
+
+        @include media-query(large) {
+            font-size: 3rem;
+        }
     }
 
     &__meta {
@@ -59,12 +71,15 @@
 
     &__author-img-wrap {
         margin-right: 15px;
+        width: 53px;
+        height: 53px;
     }
 
     &__author-img {
         @include box(53px);
         @include border-radius(50%);
         border: 2px solid white;
+        max-width: none;
     }
 
     &__author-name {
@@ -84,30 +99,32 @@
         }
     }
 
-    
-    // &--html-css {
-
-    // }
-
-    // &--wordpress {
-
-    // }
-
-    // &--javascript {
-        
-    // }
-
-    &--orange {
-        background-color: #F6B33C;
+    &--html {
+        background-color: #39add1;
     }
 
-    &--blue {
-        background-color: #55b2f4;
+    &--css {
+        background-color: #3079ab;
     }
 
-    &--salmon {
-        background-color: #f47555;
+    &--wordpress {
+        background-color: #838cc7;
     }
+
+    &--javascript {
+        background-color: #c25975;
+    }
+
+    &--dev-tools {
+        background-color: #637a91;
+    }
+
+    // &--html5-canvas {
+    //     background-color: red;
+    // }
+
+
+
 
 
 }

@@ -19,7 +19,7 @@
 
 		<div class="resource-card__front">
 			<h3 class="resource-card__title"><?php echo $term->name; ?></h3>
-			<p class="resource-card__sub-title">Awesome WordPress Themes</p>
+			<p class="resource-card__sub-title">Awesome <?php echo $term->name; ?></p>
 		</div>
 
 		<div class="resource-card__back">

@@ -78,10 +78,14 @@
   	display: block;
   	width: 100%;
   	margin: 0 auto;
-  	height: 270px;
+    border-radius: 4px;
   	position: relative; 
   	padding: 50px; 
   	margin-bottom: 50px;
+
+  	@include media-query(medium) {
+		height: 270px;
+	}
 
 	&__outer {
 		display: table;
@@ -97,8 +101,8 @@
 	}
 
 	&__desc {
-		display: table-cell;
-  		vertical-align: middle;
+		display: block;
+
 		& h1,
 		& p {
 			color: white;
@@ -107,6 +111,12 @@
 		& p {
 			margin-bottom: 22px;
 		}
+
+		@include media-query(medium) {
+			display: table-cell;
+  			vertical-align: middle;
+		}
+		
 	}
 
 	&__btn {
@@ -120,14 +130,17 @@
 	}
 
 	&__promotion {
-		float: right;
-		display: table;
-		background-size: cover;
-		display: block;
-		height: 100%;
-		width: 300px;
-		overflow: hidden;
-		position: relative;
+		display: none;
+		@include media-query(medium) {
+			float: right;
+			display: table;
+			background-size: cover;
+			display: block;
+			height: 100%;
+			width: 300px;
+			overflow: hidden;
+			position: relative;
+		}
 	}
 
 	&__promotion-img {

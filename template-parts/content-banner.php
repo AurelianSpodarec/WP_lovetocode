@@ -1,4 +1,14 @@
-<div class="banner banner--blue">
+	<?php 
+	    if ( is_single() ) {
+	        $cats =  get_the_category();
+	        $cat = $cats[0];
+	    } else {
+	        $cat = get_category( get_query_var( 'cat' ) );
+	    }
+	    $cat_slug = $cat->slug;
+    ?>
+					
+<div class="banner banner--<?php echo $cat_slug ?>">
 <div class="banner__outer">
 <div class="banner__inner">
 

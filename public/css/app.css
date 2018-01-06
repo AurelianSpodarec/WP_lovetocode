@@ -364,6 +364,7 @@ body {
   line-height: 1.5;
   color: #222;
   background-color: #f1f1f1;
+  word-break: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1110,7 +1111,7 @@ blockquote cite {
   .author-excerpt__inner {
     background: #fff; }
   .author-excerpt__bar {
-    padding: 4px 16px;
+    padding: 4px 14px;
     background: #f47621; }
     .author-excerpt__bar h3 {
       color: white; }
@@ -1121,17 +1122,23 @@ blockquote cite {
     float: left;
     margin-right: 16px; }
   .author-excerpt__img {
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%; }
+    @media (min-width: 720px) {
+      .author-excerpt__img {
+        width: 64px;
+        height: 64px; } }
   .author-excerpt__author-info span {
     color: #a2a2a2; }
   .author-excerpt__author-info h3 {
     font-size: 1.25rem;
     font-weight: bold;
     color: #3a3a3a; }
+  .author-excerpt__author-info a {
+    color: #222; }
   .author-excerpt__desc {
     font-size: 16px;
     line-height: 1.7em;
@@ -1142,11 +1149,20 @@ blockquote cite {
   color: white; }
   .banner__inner {
     min-height: 215px;
-    padding: 35px 0; }
+    padding: 10px 0; }
+    @media (min-width: 720px) {
+      .banner__inner {
+        padding: 35px 0; } }
   .banner__title {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 12px 0 35px;
     color: white; }
+    @media (min-width: 720px) {
+      .banner__title {
+        font-size: 2.5rem; } }
+    @media (min-width: 960px) {
+      .banner__title {
+        font-size: 3rem; } }
   .banner__meta {
     font-size: 1rem;
     color: #e5e5e5; }
@@ -1184,26 +1200,33 @@ blockquote cite {
     .banner__author-info span {
       margin-right: 20px; }
   .banner__author-img-wrap {
-    margin-right: 15px; }
+    margin-right: 15px;
+    width: 53px;
+    height: 53px; }
   .banner__author-img {
     width: 53px;
     height: 53px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 2px solid white; }
+    border: 2px solid white;
+    max-width: none; }
   .banner__author-name a {
     color: white; }
   .banner__author-category i {
     margin-right: 7px; }
   .banner__author-category a {
     color: white; }
-  .banner--orange {
-    background-color: #F6B33C; }
-  .banner--blue {
-    background-color: #55b2f4; }
-  .banner--salmon {
-    background-color: #f47555; }
+  .banner--html {
+    background-color: #39add1; }
+  .banner--css {
+    background-color: #3079ab; }
+  .banner--wordpress {
+    background-color: #838cc7; }
+  .banner--javascript {
+    background-color: #c25975; }
+  .banner--dev-tools {
+    background-color: #637a91; }
 
 .hero {
   -webkit-align-items: stretch;
@@ -1274,10 +1297,13 @@ blockquote cite {
   display: block;
   width: 100%;
   margin: 0 auto;
-  height: 270px;
+  border-radius: 4px;
   position: relative;
   padding: 50px;
   margin-bottom: 50px; }
+  @media (min-width: 720px) {
+    .main-banner {
+      height: 270px; } }
   .main-banner__outer {
     display: table;
     width: 100%;
@@ -1288,13 +1314,16 @@ blockquote cite {
     height: 100%;
     overflow: hidden; }
   .main-banner__desc {
-    display: table-cell;
-    vertical-align: middle; }
+    display: block; }
     .main-banner__desc h1,
     .main-banner__desc p {
       color: white; }
     .main-banner__desc p {
       margin-bottom: 22px; }
+    @media (min-width: 720px) {
+      .main-banner__desc {
+        display: table-cell;
+        vertical-align: middle; } }
   .main-banner__btn {
     background: orange;
     padding: 9px 17px;
@@ -1304,14 +1333,17 @@ blockquote cite {
     font-size: 1.2em;
     border-radius: 4px; }
   .main-banner__promotion {
-    float: right;
-    display: table;
-    background-size: cover;
-    display: block;
-    height: 100%;
-    width: 300px;
-    overflow: hidden;
-    position: relative; }
+    display: none; }
+    @media (min-width: 720px) {
+      .main-banner__promotion {
+        float: right;
+        display: table;
+        background-size: cover;
+        display: block;
+        height: 100%;
+        width: 300px;
+        overflow: hidden;
+        position: relative; } }
   .main-banner__promotion-img {
     width: 100%;
     display: block;
@@ -1885,20 +1917,16 @@ blockquote cite {
 
 .article__extra {
   background: white;
-  margin-top: 50px;
-  padding: 35px 50px; }
+  margin-top: 50px; }
+  @media (min-width: 720px) {
+    .article__extra {
+      padding: 35px 50px; } }
 
 .article-single {
   float: left;
-  width: 100%;
   background: white;
-  padding: 0 65px 0 0;
-  border-right: 1px solid #ddd; }
-  @media (min-width: 720px) {
-    .article-single {
-      width: 71.875%;
-      margin-right: 2.85714%;
-      padding: 40px 55px; } }
+  width: 100%;
+  padding: 30px 10px; }
   .article-single h2,
   .article-single h3,
   .article-single h4 {
@@ -1914,10 +1942,23 @@ blockquote cite {
   .article-single p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     word-spacing: 0.3px;
     margin-bottom: 1.25em; }
+  @media (min-width: 720px) {
+    .article-single {
+      width: 71.875%;
+      margin-right: 2.85714%;
+      padding: 25px 30px;
+      border-right: 1px solid #ddd; }
+      .article-single p {
+        font-size: 18px; } }
+  @media (min-width: 960px) {
+    .article-single {
+      padding: 40px 55px; }
+      .article-single p {
+        font-size: 20px; } }
 
 .author-profile__general-info {
   text-align: center;

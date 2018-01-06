@@ -12,11 +12,12 @@ body {
     line-height: ($global-line-height/$global-font-size);
     color: $global-text-color;
     background-color: $global-background-color;
+    word-break: break-word;
+    
     @if ($global-body-antialiased) {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
- 
 }
 
 a {
